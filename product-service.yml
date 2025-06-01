@@ -4,15 +4,3 @@ spring:
   data:
     mongodb:
       uri: mongodb://admin:123456789@localhost:27017/bd_products?authSource=admin
-bank-example:
-  business:
-    rules:
-      saving-accounts:
-        max: 1
-        maintenceFee: 0.00
-      current-account:
-        max: 1
-        maintenceFee: 50.00
-      fixed-term-deposit:
-        max: 1
-        interest-rate: 2.50
