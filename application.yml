@@ -1,0 +1,48 @@
+bank-example:
+  business:
+    rules:
+      saving-accounts:
+        default-rule:
+          allowed-client-types:
+            - PERSONAL
+          maintenance-fee: 0.00
+          free-transactions-limit: 10
+          fee-per-extra-transaction: 10
+          max-allowed: 1
+          minimum-opening-amount: 0
+        category-rules:
+          VIP:
+            maintenance-fee: 50
+      current-account:
+        default-rule:
+          allowed-client-types:
+            - PERSONAL
+            - COMPANY
+          maintenance-fee: 50.00
+          free-transactions-limit: -1
+          minimum-opening-amount: 0
+        client-rules:
+          PERSONAL:
+            max-allowed: 1
+          COMPANY:
+            max-allowed: -1
+        category-rules:
+          PYME:
+            maintenance-fee: 0
+      fixed-term-deposit:
+        default-rule:
+          allowed-client-types:
+            - PERSONAL
+          minimum-opening-amount: 2000
+          max-allowed: 1
+          interest-rate: 2.50
+      credit:
+        default-rule:
+          allowed-client-types:
+            - PERSONAL
+            - COMPANY
+        client-rules:
+          PERSONAL:
+            max-allowed: 1
+          COMPANY:
+            max-allowed: -1
