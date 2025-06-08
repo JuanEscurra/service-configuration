@@ -2,11 +2,5 @@ spring:
   data:
     mongodb:
       uri: mongodb://admin:123456789@localhost:27017/bd_clients_dev?authSource=admin
-  config:
-    import: "configserver:"
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: true
 server:
   port: 8081
