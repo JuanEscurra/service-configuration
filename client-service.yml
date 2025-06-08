@@ -1,6 +1,12 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:0}
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:123456789@localhost:27017/bd_clients?authSource=admin
+      uri: ${SPRING_DATA_MONGODB_URI}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL}
