@@ -10,6 +10,3 @@ spring:
       fail-fast: true
 server:
   port: 8081
-eureka:
-  instance:
-    instance-id: ${spring.application.name}:${random.uuid}
